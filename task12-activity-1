@@ -1,0 +1,10 @@
+GrayFinal_Image= GrayFinal;  
+EightErgb = EightE;      
+
+EightEGray = rgb2gray(EightErgb);     
+
+figure; imshow(GrayFinal_Image,[]);    title('GrayFinal');
+figure; imshow(EightEGray,[]);    title('EightEGray');
+diffImg = double(EightEGray) - double(GrayFinal_Image);
+secretKey = diffImg > 0;      
+figure; imshow(secretKey);    title('SECRET MESSAGE 23770171/ KEY');
